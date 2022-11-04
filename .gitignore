@@ -1,0 +1,8 @@
+### VisualStudioCode ###
+.vscode
+*.json
+*.log
+
+### Generated Files ###
+*.o
+*.out
