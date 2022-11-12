@@ -14,8 +14,8 @@ int main()
 {
     // Declaring variables
     int a = 5;  /* c-like initialization */
-    int b (3);  /* constructor initialization */
-    int c {2};  /* uniform initialization */
+    int b(3);   /* constructor initialization */
+    int c{2};   /* uniform initialization */
     int result; /* undetermined initial value */
 
     // Process

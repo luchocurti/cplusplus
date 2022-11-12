@@ -13,7 +13,7 @@ const char tab = '\t';
 
 /************************************ Main ************************************/
 /**
- * @brief xxx
+ * @brief Operate with variables and constants by using operators.
  *
  * @return Returns 0 when execution completes successfully.
  */
@@ -29,7 +29,7 @@ int main()
 
     /* Processing */
     x = 3;
-    y = x++;    /* y = 3 !!! */
+    y = x++; /* y = 3 !!! */
 
     /* Print results */
     cout << "x = " << x << endl;
@@ -38,7 +38,7 @@ int main()
     i = 20;
     /* As the left-hand side expression is false
         The right-hand side expression is never evaluated! */
-    if((i < 10) && (++i < n))
+    if ((i < 10) && (++i < n))
     {
         cout << "test point 1" << endl;
     }
@@ -51,7 +51,7 @@ int main()
     i = 5;
     /* As the left-hand side expression is true
         The right-hand side expression is never evaluated! */
-    if((i < 10) || (++i < n))
+    if ((i < 10) || (++i < n))
     {
         cout << "test point 3" << endl;
     }
