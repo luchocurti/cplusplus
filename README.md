@@ -63,6 +63,14 @@ make clean
 
 ------------
 
+# Common errors
+
+## Make ends with error
+
+Remember to go inside the folder of the specific program before running `make`
+
+------------
+
 # Sources
 
 + cplusplus https://cplusplus.com/

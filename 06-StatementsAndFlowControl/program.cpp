@@ -14,7 +14,7 @@ const char tab = '\t';
 
 /************************************ Main ************************************/
 /**
- * @brief Trying different flow controls
+ * @brief Trying different flow controls.
  *
  * @return Returns 0 when execution completes successfully.
  */
