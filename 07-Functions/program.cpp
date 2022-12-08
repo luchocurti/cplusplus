@@ -9,7 +9,7 @@ using namespace std;
 /******************************** Definitions *********************************/
 #define IDENTIFIER replacement
 
-/********************************* Constants **************************cd********/
+/********************************* Constants **********************************/
 const char TAB = '\t';
 
 /********************** Functions Prototypes Declaration **********************/
