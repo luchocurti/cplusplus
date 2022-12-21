@@ -1,4 +1,4 @@
-### VisualStudioCode ###
+### Visual Studio Code ###
 .vscode
 *.json
 *.log
@@ -6,3 +6,6 @@
 ### Generated Files ###
 *.o
 *.out
+
+### Local Instruction Files ###
+steps_to_release.txt
