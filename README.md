@@ -23,7 +23,7 @@ g++ -std=c++14 -Wall -O0 program.cpp -o program.out
 ### Using Make
 
 ```sh
-make all
+make [-s] all
 ```
 
 ## From VS Code
@@ -43,7 +43,7 @@ From the project folder: `./program.out`
 ## Using Make
 
 ```sh
-make run
+make [-s] run
 ```
 
 # How to Clean
@@ -58,7 +58,7 @@ rm -f /usr/local/bin/program.out
 ## Using Make
 
 ```sh
-make clean
+make [-s] clean
 ```
 
 ------------

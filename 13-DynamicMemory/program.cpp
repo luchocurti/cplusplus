@@ -87,7 +87,7 @@ int main()
         std::cout << "Error: Memory could not be allocated" << std::endl;
     }
 
-    // Free used memory
+    /* Free used Memory */
     delete p_int;
     delete[] p_int_array_1;
     delete[] p_int_array_2;
