@@ -8,8 +8,10 @@
 /********************************* Namespaces *********************************/
 
 /******************************** Definitions *********************************/
+/************** Defines **************/
 #define IDENTIFIER replacement
 
+/************ Data Types *************/
 struct product /* The type name is optional if objects are declared at the end*/
 {
     int weight;
@@ -29,6 +31,8 @@ struct friends_t
     std::string email;
     movies_t favorite_movie;
 };
+
+/************** Macros ***************/
 
 /********************************* Constants **********************************/
 const char TAB = '\t';
