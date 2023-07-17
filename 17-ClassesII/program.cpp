@@ -31,7 +31,7 @@ public:
     /*  Member function */
     CVector operator+(const CVector &param);
     CVector &operator=(const CVector &param);
-    /*  Non-member function */
+    /*  Friend function */
     friend CVector operator-(const CVector &param_1, const CVector &param_2);
 
     /* Get functions */
@@ -274,8 +274,8 @@ int main()
     vect_res_1 = vect_1 + vect_2;          /* Implicitly using the operator + */
     vect_res_2 = vect_1.operator+(vect_2); /* Explicitly using functional name*/
     vect_res_3 = vect_2 - vect_1;
-    vect_res_4 = vect_3.operator=(vect_1);
-    vect_res_5 = vect_3 = vect_2;
+    vect_res_4 = vect_3.operator=(vect_1); /* Explicitly using functional name*/
+    vect_res_5 = vect_3 = vect_2;          /* Implicitly using the operator = */
 
     dummy_ptr = &dummy_a;
 
@@ -336,8 +336,9 @@ int main()
     std::cout << "my_class_const.counter    = " << my_class_const.counter
               << std::endl; /* OK: data member "counter" can be read */
 
-    /* std::cout << "my_class_const.counter = " << my_class_const.get_A()
-              << std::endl; Cannot be called because it's not a const member */
+    std::cout << "my_class_const.counter    = " /* <<  my_class_const.get_A() */
+              << "get_A() cannot be called because it's not a const member"
+              << std::endl;
 
     std::cout << "my_class_no_const.counter = " << my_class_no_const.get_A()
               << std::endl; /* Can be called because it's a non-const member */
@@ -375,20 +376,29 @@ int main()
 /**************************** Function Definitions ****************************/
 /* Operators are overloaded by means of operator functions, which are regular
 functions with special names: their name begins by the "operator" keyword
-followed by the operator sign that is overloaded.
+followed by the operator symbol that is overloaded (e.g. +, <, -, ++, etc...)
 
 The syntax is:
-    type operator sign(parameters)
+    type operator symbol(parameters)
     {
         // ... body ...
-    }                                */
-/* Member function operator overload */
+    }
+
+Member function operator overload:
+    - It gains access to all of the member variables and functions of the class.
+    - The left operand becomes the implicit *this object.
+    - All other operands become function parameters.
+*/
 CVector CVector::operator+(const CVector &param)
 {
     CVector result;
 
-    result.x = x + param.x;
-    result.y = y + param.y;
+    result.x = this->x + param.x;
+    result.y = this->y + param.y;
+
+    /* Other option */
+    // result.x = x + param.x;
+    // result.y = y + param.y;
 
     return result;
 }
@@ -402,11 +412,15 @@ CVector &CVector::operator=(const CVector &param)
     return *this;
 }
 
-/* Non-member function operator overload */
+/* Non-member function operator overload:
+    - It does NOT have access to the private data of the class.
+    - It must be made a "friend" function if requires access to private members.
+*/
 CVector operator-(const CVector &param_1, const CVector &param_2)
 {
     CVector result;
 
+    /* friend function provides access to 'x' and 'y' */
     result.x = param_1.x - param_2.x;
     result.y = param_1.y - param_2.y;
 
