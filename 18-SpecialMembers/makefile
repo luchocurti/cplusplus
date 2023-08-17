@@ -1,0 +1,37 @@
+# Macros
+CPP = g++                  # Define CPP as g++
+CFLAGS = -Wall             # Enable All Warnings (Other ops. -Wextra, -Werror)
+STD = c++14                # Standard of the input sources
+OPTIMIZATION = -O0         # Optimization level = None (Other ops. -O3 or -Ofast)
+OBJS = program.o           # Define Object code files
+INCLUDE = -Ipath           # Define path as an INCLUDE directory
+DEPS = program.hpp         # List ALL needed *.hpp headers files here
+OUT_FILE = program.out     # Place here the name of the output file
+
+# Target (file or label): Dependency List
+# <Tab>Rules
+
+%.o: %.cpp $(DEPS)         # for all *.o files: if its *.cpp or *.hpp file changed
+	$(CPP) -std=$(STD) $(CFLAGS) $(OPTIMIZATION) -c $*.cpp -o $@
+                           # compile corresponding .cpp file again, and give its
+                           # the current target name
+
+$(OUT_FILE): $(OBJS)       # target: dependency list of *.o files
+	$(CPP) -std=$(STD) $(CFLAGS) $(OPTIMIZATION) $^ $(INCLUDE) -o $@
+
+# Install $(OUT_FILE) in /usr/local/bin
+install: $(OUT_FILE)       # make will build program.out first
+	sudo mv $(OUT_FILE) /usr/local/bin/	
+
+all: $(OUT_FILE) install   # build all listed targets: program.out, install
+
+# Run executable image $(OUT_FILE)
+run: install               # depend on install
+	$(OUT_FILE) || /bin/true
+                           # No make error 10 if main() return non-zero
+
+clean:
+	rm -f *.o *.i *.s 2> /dev/null
+                           # Remove all *.o, *.i and *.s files
+	sudo rm -f /usr/local/bin/$(OUT_FILE)
+                           # Remove the program.out

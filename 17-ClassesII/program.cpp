@@ -379,7 +379,7 @@ functions with special names: their name begins by the "operator" keyword
 followed by the operator symbol that is overloaded (e.g. +, <, -, ++, etc...)
 
 The syntax is:
-    type operator symbol(parameters)
+    type class_name::operator symbol(parameters)
     {
         // ... body ...
     }
