@@ -1,10 +1,10 @@
-# How to Open
+# How to Open a Project
 
 1. Open WSL terminal
 2. Move to the project folder: `cd ~/cpp`
 3. Open VS Code: `code .`
 
-# How to build
+# How to build (from chap 01 to 18)
 
 ## From Terminal
 
@@ -34,7 +34,17 @@ make [-s] all
 2. `Ctrl + Shift + b`
 3. Press **Debug C/C++ File** button
 
-# How to Run
+# How to build (from chapter 18 onwards)
+
+```sh
+mkdir -p build/
+cd build/
+cmake ..
+make
+[make install]
+```
+
+# How to Run (from chap 01 to 18)
 
 ## Manually
 
@@ -46,7 +56,11 @@ From the project folder: `./program.out`
 make [-s] run
 ```
 
-# How to Clean
+# How to Run (from chapter 18 onwards)
+
+From the build folder: `./main`
+
+# How to Clean (from chap 01 to 18)
 
 ## Manually
 
@@ -59,6 +73,13 @@ rm -f /usr/local/bin/program.out
 
 ```sh
 make [-s] clean
+```
+
+# How to Clean (from chapter 18 onwards)
+
+```sh
+cd project_name/
+rm -rf build/*
 ```
 
 ------------
@@ -76,5 +97,6 @@ Remember to go inside the folder of the specific program before running `make`
 + cplusplus https://cplusplus.com/
   + Standard C++ Library reference https://cplusplus.com/reference/
   + C++ tutorials from the basics to the newest C++11 https://cplusplus.com/doc/tutorial/
++ Modern C++ Course For CV (2020) https://www.ipb.uni-bonn.de/teaching/cpp-2020/
 + Online Markdown editor https://pandao.github.io/editor.md/en.html
 + makefile https://github.com/luchocurti/makefile_template
