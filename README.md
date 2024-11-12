@@ -97,6 +97,7 @@ Remember to go inside the folder of the specific program before running `make`
 + cplusplus https://cplusplus.com/
   + Standard C++ Library reference https://cplusplus.com/reference/
   + C++ tutorials from the basics to the newest C++11 https://cplusplus.com/doc/tutorial/
-+ Modern C++ Course For CV (2020) https://www.ipb.uni-bonn.de/teaching/cpp-2020/
++ Modern C++ Course For CV - 2020 https://www.ipb.uni-bonn.de/teaching/cpp-2020/
++ Modern C++ Course For CV - 2021 https://www.ipb.uni-bonn.de/teaching/cpp-2021/
 + Online Markdown editor https://pandao.github.io/editor.md/en.html
 + makefile https://github.com/luchocurti/makefile_template

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/luciano/cpp/exercises/exercise_2/task_2/src/main.cpp
+iostream
+-
+string
+-
+sstream
+-
+array
+-
+new
+-
+random
+-
+iomanip
+-
+

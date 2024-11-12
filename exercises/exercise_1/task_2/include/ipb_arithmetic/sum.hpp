@@ -1,7 +1,4 @@
 // @file      sum.hpp
-// @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
-//
-// Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 #ifndef IPB_ARITHMETIC_SUM_HPP_
 #define IPB_ARITHMETIC_SUM_HPP_
 

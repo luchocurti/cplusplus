@@ -47,8 +47,11 @@ int main()
     }
     cout << "liftoff!" << endl;
 
-    /* The for-loop has another syntax, which is used exclusively with ranges:
-        for (declaration : range) statement; */
+    /* The for-loop has another syntax known as the for-each loop, which is used
+    exclusively with containers that have a range of values such as an array or
+    a vector.
+
+        for (value : container) statement;                                    */
     str = "Hello!";
     for (char letter : str) /* OR: for (auto letter : str) */
     {
